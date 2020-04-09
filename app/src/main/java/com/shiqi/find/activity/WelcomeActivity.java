@@ -1,7 +1,8 @@
-package com.shiqi.find;
+package com.shiqi.find.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
@@ -9,12 +10,16 @@ import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
+
+import com.shiqi.find.R;
+import com.shiqi.find.util.CatchUtils;
 
 public class WelcomeActivity extends AppCompatActivity {
 
     //实例化
     private RelativeLayout welcomePage;
+    //ctrl+alt+c抽取数据：静态常量，保存是否打开过应用的key
+    public static final String START_MAIN = "start_main";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +66,19 @@ public class WelcomeActivity extends AppCompatActivity {
         @Override
         public void onAnimationEnd(Animation animation) {
 //            Toast.makeText(WelcomeActivity.this,"动画播放完毕",Toast.LENGTH_SHORT).show();
+            //判断是否打开过应用
+            boolean isStartMain= CatchUtils.getBoolean(WelcomeActivity.this, START_MAIN);
+            Intent intent;
+            if(isStartMain){
+                //打开过：直接进入主页面
+                intent=new Intent(WelcomeActivity.this,MainActivity.class);
+            }else {
+                //第一次打开应用：进入引导页面
+                intent =new Intent(WelcomeActivity.this, GuideActivity.class);
+            }
+            startActivity(intent);
+            //关闭welcome页面：
+            finish();
         }
         //重复播放时
         @Override
