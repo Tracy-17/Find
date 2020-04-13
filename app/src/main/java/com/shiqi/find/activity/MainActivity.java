@@ -1,6 +1,16 @@
 package com.shiqi.find.activity;
 
-import android.app.Activity;
+import android.os.Bundle;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+import com.shiqi.find.R;
+import com.shiqi.find.fragment.ContentFragment;
+import com.shiqi.find.fragment.LeftMenuFragment;
+import com.shiqi.find.util.DensityUtil;
 
 /**
  * Author:ShiQi

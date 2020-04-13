@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!--水平；高80-->
+
+    <com.shiqi.find.ui.NoScrollViewPager
+            android:id="@+id/viewPage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#515151"
+            android:orientation="horizontal">
+        <!--相对于父视图垂直.null:无○效果-->
+        <RadioButton
+                android:id="@+id/rb_index"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/rb_index_selector"
+                android:text="首页" />
+
+        <RadioButton
+                android:id="@+id/rb_hot"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/rb_hot_selector"
+                android:text="热门" />
+
+        <RadioButton
+                android:id="@+id/rb_article"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/rb_article_selector"
+                android:text="文章" />
+
+        <RadioButton
+                android:id="@+id/rb_cave"
+                style="@style/bottom_tag_style"
+                android:drawableTop="@drawable/rb_cave_selector"
+                android:text="树洞" />
+
+    </RadioGroup>
 
 </LinearLayout>

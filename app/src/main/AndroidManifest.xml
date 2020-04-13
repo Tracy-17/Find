@@ -2,14 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.shiqi.find">
 
+    <!--xUtils3权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /><!-- 可选 -->
+
     <application
+            android:name=".FindApplication"
             android:allowBackup="true"
             android:icon="@mipmap/icon"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/icon_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
         <activity android:name=".activity.GuideActivity" />
         <activity android:name=".activity.WelcomeActivity">
             <intent-filter>

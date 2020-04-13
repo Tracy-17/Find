@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent" android:layout_height="match_parent">
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff9e85">
+    <!--窗体居中标题文字-->
+    <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标题"
+            android:textColor="#fdfdfd"
+            android:textSize="23sp" />
+    <!--左侧菜单栏，背景透明，默认隐藏（有些页面没有）-->
+    <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/menu"
+            android:visibility="gone" />
+    <!--发布按钮-->
+    <ImageButton
+            android:id="@+id/ib_push"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/push"
+            android:visibility="gone" />
 </RelativeLayout>
