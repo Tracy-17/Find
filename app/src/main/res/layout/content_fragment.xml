@@ -5,7 +5,7 @@
         android:orientation="vertical">
 
     <!--水平；高80-->
-
+    <!--自定义控件要写全类名-->
     <com.shiqi.find.ui.NoScrollViewPager
             android:id="@+id/viewPage"
             android:layout_width="match_parent"
